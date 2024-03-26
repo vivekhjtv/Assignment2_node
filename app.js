@@ -169,7 +169,7 @@ app.get('/isbn/:isbn', (req, res) => {
     });
 });
 
-//Post Methid - Insert a new book to the database
+//Post method  - Insert a new book to the database
 app.post('/insertBook', function (req, res) {
   Book.create({
     title: req.body['title'],
@@ -220,8 +220,8 @@ app.put('/updateBook/:isbn', function (req, res) {
       res.send(err);
     });
 });
-// Step3
-// Show All Book Information
+
+// Show All Book Information using HBS
 app.get('/data', (req, res) => {
   Book.find()
     .lean()
